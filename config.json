@@ -1,0 +1,131 @@
+{
+   "Groups": [
+      {
+         "Name": "main",
+         "DisplayName": "Options",
+         "Elements": [
+            {
+               "Name": "controller_button",
+               "DisplayName": "Controller Button",
+               "Description": [
+                  "The controller button to use for cancelling a wisp"
+               ],
+               "Type": "ButtonEnum",
+               "MinValue": null,
+               "MaxValue": null,
+               "DefaultValue": "32768"
+            }		
+         ]
+      }
+   ],
+   "Enums": {
+      "ButtonEnum": [
+        {
+            "DisplayName": "Bottom Face Button",
+            "Value": "4096",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "Right Face Button",
+            "Value": "8192",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "Left Face Button",
+            "Value": "16384",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "Top Face Button",
+            "Value": "32768",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "Left Bumper",
+            "Value": "256",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "Right Bumper",
+            "Value": "512",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "Back",
+            "Value": "32",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "D-Pad Up",
+            "Value": "1",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "D-Pad Down",
+            "Value": "2",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "D-Pad Left",
+            "Value": "4",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "D-Pad Right",
+            "Value": "8",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "Left Stick",
+            "Value": "64",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "Right Stick",
+            "Value": "128",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "Left Trigger",
+            "Value": "Left Trigger",
+            "Description": [
+               ""
+            ]
+         },
+         {
+            "DisplayName": "Right Trigger",
+            "Value": "Right Trigger",
+            "Description": [
+               ""
+            ]
+         }
+      ]
+   },
+   "IniFile": "config.ini"
+}

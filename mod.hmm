@@ -1,33 +1,50 @@
 Code "Wisp Cancel Button" by "TheNonexistentHedgehog"
 
 #lib XInput
+#lib INI
+#lib HMM
 
 static bool IsKeyDown(Keys in_keys) {
     return (GetAsyncKeyState(in_keys) & 0x8000) != 0;
 }
+static bool ControllerButtonDown() {
+    if (button_string == "Left Trigger")
+        return (XInput.GetTrigger(0) > 0.5);
+    else if (button_string == "Right Trigger")
+        return (XInput.GetTrigger(1) > 0.5);
+    else
+        return XInput.IsButtonDown((XInput.Buttons)button_id);
+}
 
 static bool first_frame = true;
 
-static bool right_stick_already_down = false;
+static bool controller_button_already_down = false;
 static bool f1_already_down = false;
 
 static bool wisp_just_canceled = false;
 
 static long address = 0x1417E6FF6;
 
+static string button_string = "";
+static int button_id = 0;
+
 if (first_frame) {//When the game boots up, take code that makes sonic stay in a wisp form until a timer expires,
     first_frame = false;//copy it 5 bytes ahead of where it normally is, and add a bunch of nops before it. (There's convieniently a code cave right after this code.)
     WriteProtected<byte>(address, 0x90, 0x90, 0x90, 0x90,  0xF3, 0x0F, 0x11, 0x41, 0x14,  0xC3);
+    //Also, read the configured controller button and save it to a variable
+    button_string = INI.Parse<string>(INI.Read(System.IO.Path.Combine(HMM.FindModsByName("Wisp Cancel Button")[0].Path, "config.ini"))["main"]["controller_button"], button_string);
+    if (button_string != "Left Trigger" && button_string != "Right Trigger")
+        button_id = Int32.Parse(button_string);
 }
 
 if (wisp_just_canceled) {
     wisp_just_canceled = false;
     WriteNop(address, 4);
 }
-if ((XInput.IsButtonDown((XInput.Buttons)0x0080) && !right_stick_already_down) || (IsKeyDown(Keys.F1) && !f1_already_down)) {
+if ((ControllerButtonDown() && !controller_button_already_down) || (IsKeyDown(Keys.F1) && !f1_already_down)) {
     WriteProtected<byte>(address, 0xF3, 0x0F, 0x5C, 0xC0);//When the player presses the cancel button, replace the nops that were added earlier with code to set the timer to zero.
-    wisp_just_canceled = true;//Setting this variable to true will make it change that code back to nops.
+    wisp_just_canceled = true;//Setting this variable to true will make it change that code back to nops next frame.
 }
 
-right_stick_already_down = (XInput.IsButtonDown((XInput.Buttons)0x0080)) ? true : false;
+controller_button_already_down = ControllerButtonDown();
 f1_already_down = (IsKeyDown(Keys.F1)) ? true : false;

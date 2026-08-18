@@ -15,8 +15,8 @@ static bool wisp_just_canceled = false;
 
 static long address = 0x1417E6FF6;
 
-if (first_frame) {
-    first_frame = false;
+if (first_frame) {//When the game boots up, take code that makes sonic stay in a wisp form until a timer expires,
+    first_frame = false;//copy it 5 bytes ahead of where it normally is, and add a bunch of nops before it. (There's convieniently a code cave right after this code.)
     WriteProtected<byte>(address, 0x90, 0x90, 0x90, 0x90,  0xF3, 0x0F, 0x11, 0x41, 0x14,  0xC3);
 }
 
@@ -25,8 +25,8 @@ if (wisp_just_canceled) {
     WriteNop(address, 4);
 }
 if ((XInput.IsButtonDown((XInput.Buttons)0x0080) && !right_stick_already_down) || (IsKeyDown(Keys.F1) && !f1_already_down)) {
-    WriteProtected<byte>(address, 0xF3, 0x0F, 0x5C, 0xC0);
-    wisp_just_canceled = true;
+    WriteProtected<byte>(address, 0xF3, 0x0F, 0x5C, 0xC0);//When the player presses the cancel button, replace the nops that were added earlier with code to set the timer to zero.
+    wisp_just_canceled = true;//Setting this variable to true will make it change that code back to nops.
 }
 
 right_stick_already_down = (XInput.IsButtonDown((XInput.Buttons)0x0080)) ? true : false;

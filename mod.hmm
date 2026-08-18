@@ -1,0 +1,33 @@
+Code "Wisp Cancel Button" by "TheNonexistentHedgehog"
+
+#lib XInput
+
+static bool IsKeyDown(Keys in_keys) {
+    return (GetAsyncKeyState(in_keys) & 0x8000) != 0;
+}
+
+static bool first_frame = true;
+
+static bool right_stick_already_down = false;
+static bool f1_already_down = false;
+
+static bool wisp_just_canceled = false;
+
+static long address = 0x1417E6FF6;
+
+if (first_frame) {
+    first_frame = false;
+    WriteProtected<byte>(address, 0x90, 0x90, 0x90, 0x90,  0xF3, 0x0F, 0x11, 0x41, 0x14,  0xC3);
+}
+
+if (wisp_just_canceled) {
+    wisp_just_canceled = false;
+    WriteNop(address, 4);
+}
+if ((XInput.IsButtonDown((XInput.Buttons)0x0080) && !right_stick_already_down) || (IsKeyDown(Keys.F1) && !f1_already_down)) {
+    WriteProtected<byte>(address, 0xF3, 0x0F, 0x5C, 0xC0);
+    wisp_just_canceled = true;
+}
+
+right_stick_already_down = (XInput.IsButtonDown((XInput.Buttons)0x0080)) ? true : false;
+f1_already_down = (IsKeyDown(Keys.F1)) ? true : false;

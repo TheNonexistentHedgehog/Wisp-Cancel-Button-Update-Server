@@ -13,8 +13,19 @@
                "Type": "ButtonEnum",
                "MinValue": null,
                "MaxValue": null,
-               "DefaultValue": "32768"
-            }		
+               "DefaultValue": "Right Trigger"
+            },
+            {
+               "Name": "keyboard_key",
+               "DisplayName": "Keyboard Key",
+               "Description": [
+                  "The keyboard key to use for cancelling a wisp"
+               ],
+               "Type": "KeyboardButtonEnum",
+               "MinValue": null,
+               "MaxValue": null,
+               "DefaultValue": "Tab"
+            }
          ]
       }
    ],
@@ -124,6 +135,913 @@
             "Description": [
                ""
             ]
+         }
+      ],
+
+      "KeyboardButtonEnum": [
+         {
+            "DisplayName": "Left Click",
+            "Value": "LButton",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Right Click",
+            "Value": "RButton",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Cancel",
+            "Value": "Cancel",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Middle Click",
+            "Value": "MButton",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "M4",
+            "Value": "XButton1",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "M5",
+            "Value": "XButton2",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Back",
+            "Value": "Back",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Tab",
+            "Value": "Tab",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "LineFeed",
+            "Value": "LineFeed",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Clear",
+            "Value": "Clear",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Enter",
+            "Value": "Enter",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Return",
+            "Value": "Return",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Shift",
+            "Value": "ShiftKey",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Ctrl",
+            "Value": "ControlKey",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Menu",
+            "Value": "Menu",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Pause",
+            "Value": "Pause",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "CapsLock",
+            "Value": "CapsLock",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "HangulMode",
+            "Value": "HangulMode",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "KanaMode",
+            "Value": "KanaMode",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "JunjaMode",
+            "Value": "JunjaMode",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "FinalMode",
+            "Value": "FinalMode",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "HanjaMode",
+            "Value": "HanjaMode",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "KanjiMode",
+            "Value": "KanjiMode",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Escape",
+            "Value": "Escape",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "IMEConvert",
+            "Value": "IMEConvert",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "IMENonconvert",
+            "Value": "IMENonconvert",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "IMEAccept",
+            "Value": "IMEAccept",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "IMEModeChange",
+            "Value": "IMEModeChange",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Space",
+            "Value": "Space",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "PageUp/Prior",
+            "Value": "PageUp",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "PageDown/Next",
+            "Value": "PageDown",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "End",
+            "Value": "End",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Home",
+            "Value": "Home",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Left",
+            "Value": "Left",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Up",
+            "Value": "Up",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Right",
+            "Value": "Right",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Down",
+            "Value": "Down",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Select",
+            "Value": "Select",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Print",
+            "Value": "Print",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Execute",
+            "Value": "Execute",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "PrintScreen",
+            "Value": "PrintScreen",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Snapshot",
+            "Value": "Snapshot",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Insert",
+            "Value": "Insert",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Delete",
+            "Value": "Delete",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Help",
+            "Value": "Help",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "0",
+            "Value": "D0",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "1",
+            "Value": "D1",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "2",
+            "Value": "D2",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "3",
+            "Value": "D3",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "4",
+            "Value": "D4",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "5",
+            "Value": "D5",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "6",
+            "Value": "D6",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "7",
+            "Value": "D7",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "8",
+            "Value": "D8",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "9",
+            "Value": "D9",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "A",
+            "Value": "A",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "B",
+            "Value": "B",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "C",
+            "Value": "C",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "D",
+            "Value": "D",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "E",
+            "Value": "E",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F",
+            "Value": "F",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "G",
+            "Value": "G",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "H",
+            "Value": "H",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "I",
+            "Value": "I",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "J",
+            "Value": "J",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "K",
+            "Value": "K",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "L",
+            "Value": "L",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "M",
+            "Value": "M",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "N",
+            "Value": "N",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "O",
+            "Value": "O",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "P",
+            "Value": "P",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Q",
+            "Value": "Q",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "R",
+            "Value": "R",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "S",
+            "Value": "S",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "T",
+            "Value": "T",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "U",
+            "Value": "U",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "V",
+            "Value": "V",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "W",
+            "Value": "W",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "X",
+            "Value": "X",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Y",
+            "Value": "Y",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Z",
+            "Value": "Z",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Left Windows",
+            "Value": "LWin",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Right Windows",
+            "Value": "RWin",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Apps",
+            "Value": "Apps",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Sleep",
+            "Value": "Sleep",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumPad0",
+            "Value": "NumPad0",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumPad1",
+            "Value": "NumPad1",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumPad2",
+            "Value": "NumPad2",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumPad3",
+            "Value": "NumPad3",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumPad4",
+            "Value": "NumPad4",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumPad5",
+            "Value": "NumPad5",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumPad6",
+            "Value": "NumPad6",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumPad7",
+            "Value": "NumPad7",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumPad8",
+            "Value": "NumPad8",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumPad9",
+            "Value": "NumPad9",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Multiply",
+            "Value": "Multiply",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Add",
+            "Value": "Add",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Separator",
+            "Value": "Separator",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Subtract",
+            "Value": "Subtract",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Decimal",
+            "Value": "Decimal",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Divide",
+            "Value": "Divide",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F1",
+            "Value": "F1",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F2",
+            "Value": "F2",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F3",
+            "Value": "F3",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F4",
+            "Value": "F4",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F5",
+            "Value": "F5",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F6",
+            "Value": "F6",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F7",
+            "Value": "F7",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F8",
+            "Value": "F8",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F9",
+            "Value": "F9",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F10",
+            "Value": "F10",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F11",
+            "Value": "F11",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F12",
+            "Value": "F12",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F13",
+            "Value": "F13",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F14",
+            "Value": "F14",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F15",
+            "Value": "F15",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F16",
+            "Value": "F16",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F17",
+            "Value": "F17",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F18",
+            "Value": "F18",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F19",
+            "Value": "F19",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F20",
+            "Value": "F20",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F21",
+            "Value": "F21",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F22",
+            "Value": "F22",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F23",
+            "Value": "F23",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "F24",
+            "Value": "F24",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "NumLock",
+            "Value": "NumLock",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Scroll",
+            "Value": "Scroll",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Left Shift",
+            "Value": "LShiftKey",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Right Shift",
+            "Value": "RShiftKey",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Left Ctrl",
+            "Value": "LControlKey",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Right Ctrl",
+            "Value": "RControlKey",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Left Menu",
+            "Value": "LMenu",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Right Menu",
+            "Value": "RMenu",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "BrowserBack",
+            "Value": "BrowserBack",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "BrowserForward",
+            "Value": "BrowserForward",
+            "Description": [""]
+         },
+         {"DisplayName": "BrowserRefresh",
+            "Value": "BrowserRefresh",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "BrowserStop",
+            "Value": "BrowserStop",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "BrowserSearch",
+            "Value": "BrowserSearch",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "BrowserFavorites",
+            "Value": "BrowserFavorites",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "BrowserHome",
+            "Value": "BrowserHome",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "VolumeMute",
+            "Value": "VolumeMute",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "VolumeDown",
+            "Value": "VolumeDown",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "VolumeUp",
+            "Value": "VolumeUp",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "MediaNextTrack",
+            "Value": "MediaNextTrack",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "MediaPreviousTrack",
+            "Value": "MediaPreviousTrack",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "MediaStop",
+            "Value": "MediaStop",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "MediaPlayPause",
+            "Value": "MediaPlayPause",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "LaunchMail",
+            "Value": "LaunchMail",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "SelectMedia",
+            "Value": "SelectMedia",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "LaunchApplication1",
+            "Value": "LaunchApplication1",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "LaunchApplication2",
+            "Value": "LaunchApplication2",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oem1",
+            "Value": "Oem1",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "OemSemicolon",
+            "Value": "OemSemicolon",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oemplus",
+            "Value": "Oemplus",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oemcomma",
+            "Value": "Oemcomma",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "OemMinus",
+            "Value": "OemMinus",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "OemPeriod",
+            "Value": "OemPeriod",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oem2",
+            "Value": "Oem2",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "OemQuestion",
+            "Value": "OemQuestion",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oem3",
+            "Value": "Oem3",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oemtilde",
+            "Value": "Oemtilde",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oem4",
+            "Value": "Oem4",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Open Bracket",
+            "Value": "OemOpenBrackets",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oem5",
+            "Value": "Oem5",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "OemPipe",
+            "Value": "OemPipe",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oem6",
+            "Value": "Oem6",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Close Bracket",
+            "Value": "OemCloseBrackets",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oem7",
+            "Value": "Oem7",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "OemQuotes",
+            "Value": "OemQuotes",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oem8",
+            "Value": "Oem8",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Oem102",
+            "Value": "Oem102",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "OemBackslash",
+            "Value": "OemBackslash",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Process",
+            "Value": "ProcessKey",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Attn",
+            "Value": "Attn",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Crsel",
+            "Value": "Crsel",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Exsel",
+            "Value": "Exsel",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "EraseEof",
+            "Value": "EraseEof",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Play",
+            "Value": "Play",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Zoom",
+            "Value": "Zoom",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Pa1",
+            "Value": "Pa1",
+            "Description": [""]
+         },
+         {
+            "DisplayName": "Clear",
+            "Value": "OemClear",
+            "Description": [""]
          }
       ]
    },
